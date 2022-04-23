@@ -1,5 +1,3 @@
-"use strict";
-
 const getUint32 = (arr, i) => arr[i] | arr[i + 1 | 0] << 8 | arr[i + 2 | 0] << 16 | arr[i + 3 | 0] << 24;
 
 const rotl32 = (x, r) => (x << r) | (x >>> 32 - r);
