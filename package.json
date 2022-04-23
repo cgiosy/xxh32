@@ -6,6 +6,7 @@
   "type": "module",
   "files": [
     "index.js",
+    "index.min.js",
     "index.d.ts"
   ],
   "types": "./@types/index.d.ts",
