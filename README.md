@@ -15,13 +15,13 @@ and just `import` or `require` xxh32.
 You can directly import in ES Modules. (works in Browser, Node.js, Deno)
 
 ```js
-import xxh32 from "https://unpkg.com/xxh32@1.0.2/index.min.js";
+import xxh32 from "https://unpkg.com/xxh32@1.1.0/index.min.js";
 ```
 
 or use dynamic import.
 
 ```js
-const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.0.2/index.min.js");
+const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.1.0/index.min.js");
 ```
 
 ## Usage
