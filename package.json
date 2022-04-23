@@ -1,6 +1,6 @@
 {
   "name": "xxh32",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fastest 0.5kb(gzip) JavaScript implementation of the XXH32(xxHash32) algorithm.",
   "main": "./index.js",
   "type": "module",
@@ -16,5 +16,11 @@
     "url": "git://github.com/cgiosy/xxh32.git"
   },
   "homepage": "https://github.com/cgiosy/xxh32",
-  "keywords": ["hash", "xxh", "xxh32", "xxhash", "xxhash32"]
+  "keywords": [
+    "hash",
+    "xxh",
+    "xxh32",
+    "xxhash",
+    "xxhash32"
+  ]
 }
