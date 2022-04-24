@@ -1,6 +1,6 @@
 # xxh32
 
-Fastest 0.5kb(gzip) JavaScript implementation of [Cyan4973"s XXH32](https://github.com/Cyan4973/xxHash)(xxHash32) algorithm.
+Fastest 0.5kb(gzip) JavaScript implementation of [Cyan4973's XXH32](https://github.com/Cyan4973/xxHash) (xxHash32) algorithm.
 
 ## Installation
 
@@ -8,20 +8,24 @@ Fastest 0.5kb(gzip) JavaScript implementation of [Cyan4973"s XXH32](https://gith
 npm install xxh32
 ```
 
-and just `import` or `require` xxh32.
+and import it:
+
+```js
+import xxh32 from "xxh32";
+```
 
 ### Without installation
 
-You can directly import in ES Modules. (works in Browser, Node.js, Deno)
+You can directly import in ES Modules. (works in Browser, Deno)
 
 ```js
-import xxh32 from "https://unpkg.com/xxh32@1.1.0/index.min.js";
+import xxh32 from "https://unpkg.com/xxh32@1.2.0/index.min.js";
 ```
 
 or use dynamic import.
 
 ```js
-const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.1.0/index.min.js");
+const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.2.0/index.min.js");
 ```
 
 ## Usage
@@ -30,4 +34,7 @@ const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.1.0/index.min
 xxh32(new Uint8Array(222)) // === 2025467952
 
 xxh32(new TextEncoder().encode("test")) // === 1042293711
+
+const seed = 1234;
+xxh32(new Uint8Array(222), seed) // === 2335345817
 ```
