@@ -1,17 +1,9 @@
 {
   "name": "xxh32",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Fastest 0.5kb(gzip) JavaScript implementation of the XXH32(xxHash32) algorithm.",
   "main": "./index.js",
   "type": "module",
-  "files": [
-    "index.js",
-    "index.min.js",
-    "index.d.ts",
-    "stream.js",
-    "stream.min.js",
-    "stream.d.ts"
-  ],
   "devDependencies": {
     "terser": "^5.12.1"
   },
