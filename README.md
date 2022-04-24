@@ -19,13 +19,13 @@ import xxh32 from "xxh32";
 You can directly import URL in ES Modules. (works in Browser, Deno)
 
 ```js
-import xxh32 from "https://unpkg.com/xxh32@1.2.0/index.min.js";
+import xxh32 from "https://unpkg.com/xxh32@1.2.2/index.min.js";
 ```
 
 or use dynamic import.
 
 ```js
-const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.2.0/index.min.js");
+const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.2.2/index.min.js");
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ import xxh32s from "xxh32/streaming";
 or
 
 ```js
-import xxh32s from "https://unpkg.com/xxh32@1.2.0/stream.min.js";
+import xxh32s from "https://unpkg.com/xxh32@1.2.2/stream.min.js";
 ```
 
 ### Usage (Streaming)
