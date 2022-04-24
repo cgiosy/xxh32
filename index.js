@@ -24,7 +24,7 @@ const xxh32 = (buf, seed = 0) => {
         v2 = Math.imul(rotl32(v2 + Math.imul(getUint32(buf, i + 8 | 0), 0x85EBCA77) | 0, 13), 0x9E3779B1);
         v3 = Math.imul(rotl32(v3 + Math.imul(getUint32(buf, i + 12 | 0), 0x85EBCA77) | 0, 13), 0x9E3779B1);
       }
-    
+
       h = (((rotl32(v0, 1) + rotl32(v1, 7) | 0) + rotl32(v2, 12) | 0) + rotl32(v3, 18) | 0) + len | 0;
       for (; (i + 3 | 0) < len; i = i + 4 | 0)
         h = Math.imul(rotl32(h + Math.imul(getUint32(buf, i), 0xC2B2AE3D) | 0, 17), 0x27D4EB2F);
@@ -36,7 +36,7 @@ const xxh32 = (buf, seed = 0) => {
         v2 = Math.imul(rotl32(v2 + Math.imul(view.getUint32(i + 8 | 0, true), 0x85EBCA77) | 0, 13), 0x9E3779B1);
         v3 = Math.imul(rotl32(v3 + Math.imul(view.getUint32(i + 12 | 0, true), 0x85EBCA77) | 0, 13), 0x9E3779B1);
       }
-    
+
       h = (((rotl32(v0, 1) + rotl32(v1, 7) | 0) + rotl32(v2, 12) | 0) + rotl32(v3, 18) | 0) + len | 0;
       for (; (i + 3 | 0) < len; i = i + 4 | 0)
         h = Math.imul(rotl32(h + Math.imul(view.getUint32(i, true), 0xC2B2AE3D) | 0, 17), 0x27D4EB2F);

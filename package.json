@@ -5,13 +5,16 @@
   "main": "./index.js",
   "type": "module",
   "files": [
-    "index.js",
-    "index.min.js",
-    "index.d.ts"
+    "./*.js",
+    "./*.d.ts"
   ],
+  "devDependencies": {
+    "terser": "^5.12.1"
+  },
   "types": "./@types/index.d.ts",
   "scripts": {
-    "build": "terser --module -m -p ecma=8 -c ecma=8 index.js > index.min.js"
+    "build": "terser --module -m -p ecma=8 -c ecma=8 index.js > index.min.js",
+    "build:stream": "terser --module -m -p ecma=8 -c ecma=8 stream.js > stream.min.js"
   },
   "author": "cgiosy",
   "license": "MIT",
