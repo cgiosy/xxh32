@@ -5,8 +5,12 @@
   "main": "./index.js",
   "type": "module",
   "files": [
-    "./*.js",
-    "./*.d.ts"
+    "./index.js",
+    "./index.min.js",
+    "./index.d.ts",
+    "./stream.js",
+    "./stream.min.js",
+    "./stream.d.ts"
   ],
   "devDependencies": {
     "terser": "^5.12.1"
