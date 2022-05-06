@@ -1,29 +1,45 @@
 {
-  "name": "xxh32",
-  "version": "1.2.3",
-  "description": "Fastest 0.5kb(gzip) JavaScript implementation of the XXH32(xxHash32) algorithm.",
-  "main": "./index.js",
-  "type": "module",
-  "devDependencies": {
-    "terser": "^5.12.1"
-  },
-  "types": "./@types/index.d.ts",
-  "scripts": {
-    "build": "terser --module -m -p ecma=8 -c ecma=8 index.js > index.min.js",
-    "build:stream": "terser --module -m -p ecma=8 -c ecma=8 stream.js > stream.min.js"
-  },
-  "author": "cgiosy",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/cgiosy/xxh32.git"
-  },
-  "homepage": "https://github.com/cgiosy/xxh32",
-  "keywords": [
-    "hash",
-    "xxh",
-    "xxh32",
-    "xxhash",
-    "xxhash32"
-  ]
+	"name": "xxh32",
+	"version": "1.2.3",
+	"description": "Fastest 0.5kb(gzip) JavaScript implementation of the XXH32(xxHash32) algorithm.",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"type": "module",
+	"files": [
+		"dist/index.js",
+		"dist/index.d.ts",
+		"dist/stream.js",
+		"dist/stream.d.ts"
+	],
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.22.0",
+		"@typescript-eslint/parser": "^5.22.0",
+		"esbuild": "^0.14.38",
+		"eslint": "^8.14.0",
+		"npm-run-all": "^4.1.5",
+		"typescript": "^4.6.4"
+	},
+	"scripts": {
+		"build": "run-p build:*",
+		"build:types": "tsc --noEmit false --emitDeclarationOnly --outDir dist",
+		"build:bundle": "esbuild src/*.ts --bundle --format=esm --target=es2019 --minify --outdir=dist"
+	},
+	"author": "cgiosy",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/cgiosy/xxh32.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"packageManager": "pnpm@7.0.0",
+	"homepage": "https://github.com/cgiosy/xxh32",
+	"keywords": [
+		"hash",
+		"xxh",
+		"xxh32",
+		"xxhash",
+		"xxhash32"
+	]
 }
