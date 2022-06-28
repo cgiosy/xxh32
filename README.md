@@ -5,7 +5,7 @@ Fastest 0.5kb(gzip) JavaScript implementation of [Cyan4973's XXH32](https://gith
 ## Installation
 
 ```sh
-npm install xxh32
+npm i xxh32
 ```
 
 and import it:
@@ -19,13 +19,13 @@ import xxh32 from "xxh32";
 You can directly import URL in ES Modules. (works in Browser, Deno)
 
 ```js
-import xxh32 from "https://unpkg.com/xxh32@1.3.1/dist/index.js";
+import xxh32 from "https://unpkg.com/xxh32@1.4.0/dist/index.bundle.js";
 ```
 
 or use dynamic import.
 
 ```js
-const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.3.1/dist/index.js");
+const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.4.0/dist/index.bundle.js");
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ import xxh32s from "xxh32/dist/stream.js";
 or
 
 ```js
-import xxh32s from "https://unpkg.com/xxh32@1.3.1/dist/stream.js";
+import xxh32s from "https://unpkg.com/xxh32@1.4.0/dist/stream.bundle.js";
 ```
 
 ### Usage (Streaming)
