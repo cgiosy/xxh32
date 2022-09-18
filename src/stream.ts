@@ -77,7 +77,7 @@ const xxh32s = (seed = 0) => {
 			u1 = v1;
 			u2 = v2;
 			u3 = v3;
-	    return self;
+			return self;
 		},
 		digest: () => {
 			let h = seed + 0x165667B1 | 0;
