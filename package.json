@@ -1,6 +1,6 @@
 {
 	"name": "xxh32",
-	"version": "1.4.0",
+	"version": "2.0.0",
 	"description": "Fastest 0.5kb(gzip) JavaScript implementation of the XXH32(xxHash32) algorithm.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
@@ -9,23 +9,27 @@
 		"dist/index.js",
 		"dist/index.bundle.js",
 		"dist/index.d.ts",
-		"dist/stream.js",
-		"dist/stream.bundle.js",
-		"dist/stream.d.ts"
+		"dist/raw.js",
+		"dist/raw.bundle.js",
+		"dist/raw.d.ts",
+		"dist/stream-raw.js",
+		"dist/stream-raw.bundle.js",
+		"dist/stream-raw.d.ts"
 	],
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.22.0",
-		"@typescript-eslint/parser": "^5.22.0",
-		"esbuild": "^0.14.38",
-		"eslint": "^8.14.0",
+		"@typescript-eslint/eslint-plugin": "^8.13.0",
+		"@typescript-eslint/parser": "^8.13.0",
+		"esbuild": "^0.24.0",
+		"eslint": "^9.14.0",
 		"npm-run-all": "^4.1.5",
-		"typescript": "^4.6.4"
+		"typescript": "^5.6.3"
 	},
 	"scripts": {
 		"build": "run-p build:*",
 		"build:types": "tsc --noEmit false --emitDeclarationOnly --outDir dist",
 		"build:index": "esbuild src/index.ts --bundle --format=esm --target=es2019 --minify --outfile=dist/index.bundle.js",
-		"build:stream": "esbuild src/stream.ts --bundle --format=esm --target=es2019 --minify --outfile=dist/stream.bundle.js",
+		"build:raw": "esbuild src/raw.ts --bundle --format=esm --target=es2019 --minify --outfile=dist/raw.bundle.js",
+		"build:stream-raw": "esbuild src/stream-raw.ts --bundle --format=esm --target=es2019 --minify --outfile=dist/stream-raw.bundle.js",
 		"build:bundle-all": "esbuild src/*.ts --bundle --format=esm --target=es2019 --outdir=dist"
 	},
 	"author": "cgiosy",
@@ -37,7 +41,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"packageManager": "pnpm@7.0.0",
+	"packageManager": "pnpm@9.12.3",
 	"homepage": "https://github.com/cgiosy/xxh32",
 	"keywords": [
 		"hash",

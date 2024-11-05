@@ -11,7 +11,7 @@ npm i xxh32
 and import it:
 
 ```js
-import xxh32 from "xxh32";
+import { xxh32 } from "xxh32";
 ```
 
 ### Without installation
@@ -19,50 +19,53 @@ import xxh32 from "xxh32";
 You can directly import URL in ES Modules. (works in Browser, Deno)
 
 ```js
-import xxh32 from "https://unpkg.com/xxh32@1.4.0/dist/index.bundle.js";
+import { xxh32 } from "https://unpkg.com/xxh32@2.0.0/dist/index.bundle.js";
+import { xxh32r } from "https://unpkg.com/xxh32@2.0.0/dist/raw.bundle.js"; // for Uint8Array
 ```
 
 or use dynamic import.
 
 ```js
-const { default: xxh32 } = await import("https://unpkg.com/xxh32@1.4.0/dist/index.bundle.js");
+const { xxh32 } = await import("https://unpkg.com/xxh32@2.0.0/dist/index.bundle.js");
 ```
 
 ## Usage
 
 ```js
-xxh32(new Uint8Array(222)) // === 2025467952
-
-xxh32(new TextEncoder().encode("test")) // === 1042293711
+xxh32("test") // === 1042293711
+xxh32r(new TextEncoder().encode("test")) // === 1042293711
 
 const seed = 1234;
-xxh32(new Uint8Array(222), seed) // === 2335345817
+xxh32("test", seed) // === 1983208713
+
+xxh32r(new Uint8Array(222)) // === 2025467952
+xxh32r(new Uint8Array(222), seed) // === 2335345817
 ```
 
 ## Streaming
 
 ```js
-import xxh32s from "xxh32/dist/stream.js";
+import { xxh32sr } from "xxh32/dist/stream.js";
 ```
 
 or
 
 ```js
-import xxh32s from "https://unpkg.com/xxh32@1.4.0/dist/stream.bundle.js";
+import { xxh32sr } from "https://unpkg.com/xxh32@2.0.0/dist/stream-raw.bundle.js";
 ```
 
 ### Usage (Streaming)
 
 ```js
-xxh32s().update(new Uint8Array(222)).digest() // === 2025467952
+xxh32sr().update(new Uint8Array(222)).digest() // === 2025467952
 
-xxh32s()
+xxh32sr()
   .update(new TextEncoder().encode("te"))
   .update(new TextEncoder().encode("st"))
   .digest() // === 1042293711
 
 const seed = 1234;
-xxh32s(seed)
+xxh32sr(seed)
   .update(new Uint8Array(111))
   .update(new Uint8Array(111))
   .digest() // === 2335345817

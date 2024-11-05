@@ -2,7 +2,7 @@ const getUint32 = (arr: Uint8Array, i: number) => arr[i] | arr[i + 1 | 0] << 8 |
 
 const rotl32 = (x: number, r: number) => (x << r) | (x >>> 32 - r);
 
-const xxh32s = (seed = 0) => {
+export const xxh32sr = (seed = 0) => {
 	seed |= 0;
 	let k = 0;
 	let u0 = seed + 0x24234428 | 0;
@@ -99,5 +99,3 @@ const xxh32s = (seed = 0) => {
 
 	return self;
 };
-
-export default xxh32s;

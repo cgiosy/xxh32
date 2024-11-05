@@ -3,7 +3,7 @@
 	"display": "Base tsconfig",
 	"compilerOptions": {
 		"target": "ES2019",
-		"lib": ["ES2019"],
+		"lib": ["ES2019", "DOM"],
 		"allowJs": false,
 		"skipLibCheck": false,
 		"esModuleInterop": false,
