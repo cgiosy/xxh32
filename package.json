@@ -1,6 +1,6 @@
 {
 	"name": "xxh32",
-	"version": "2.0.2",
+	"version": "2.0.3",
 	"description": "Fastest 0.5kb(gzip) JavaScript implementation of the XXH32(xxHash32) algorithm.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
