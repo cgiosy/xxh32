@@ -45,7 +45,7 @@ xxh32r(new Uint8Array(222), seed) // === 2335345817
 ## Streaming
 
 ```js
-import { xxh32sr } from "xxh32/dist/stream.js";
+import { xxh32sr } from "xxh32/dist/stream-raw.js";
 ```
 
 or
