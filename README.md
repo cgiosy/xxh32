@@ -19,14 +19,14 @@ import { xxh32 } from "xxh32";
 You can directly import URL in ES Modules. (works in Browser, Deno)
 
 ```js
-import { xxh32 } from "https://unpkg.com/xxh32@2.0.0/dist/index.bundle.js";
-import { xxh32r } from "https://unpkg.com/xxh32@2.0.0/dist/raw.bundle.js"; // for Uint8Array
+import { xxh32 } from "https://unpkg.com/xxh32@2.0.1/dist/index.bundle.js";
+import { xxh32r } from "https://unpkg.com/xxh32@2.0.1/dist/raw.bundle.js"; // for Uint8Array
 ```
 
 or use dynamic import.
 
 ```js
-const { xxh32 } = await import("https://unpkg.com/xxh32@2.0.0/dist/index.bundle.js");
+const { xxh32 } = await import("https://unpkg.com/xxh32@2.0.1/dist/index.bundle.js");
 ```
 
 ## Usage
@@ -51,7 +51,7 @@ import { xxh32sr } from "xxh32/dist/stream-raw.js";
 or
 
 ```js
-import { xxh32sr } from "https://unpkg.com/xxh32@2.0.0/dist/stream-raw.bundle.js";
+import { xxh32sr } from "https://unpkg.com/xxh32@2.0.1/dist/stream-raw.bundle.js";
 ```
 
 ### Usage (Streaming)
