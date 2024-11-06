@@ -7,7 +7,7 @@ let dataView = new DataView(buffer);
 const rotl32 = (x: number, r: number) => (x << r) | (x >>> 32 - r);
 
 export const xxh32 = (str: string, seed = 0) => {
-	const strLen = (str.length | 0) * 3 | 0; // maximum 3 bytes per character
+	const strLen = Math.imul(str.length, 3); // maximum 3 bytes per character
 	if (strLen > bufferLength) {
 		bufferLength = (strLen - 1 | 4095) + 1 | 0;
 		buffer = new ArrayBuffer(bufferLength);
