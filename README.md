@@ -26,17 +26,17 @@ Alternatively, you can use the module directly in environments supporting ES Mod
 
 ```js
 // For string hashing (uses TextEncoder)
-import { xxh32 } from "https://unpkg.com/xxh32@2.0.4/dist/index.bundle.js";
+import { xxh32 } from "https://unpkg.com/xxh32@2.0.5/dist/index.bundle.js";
 
 // For direct Uint8Array hashing
-import { xxh32r } from "https://unpkg.com/xxh32@2.0.4/dist/raw.bundle.js";
+import { xxh32r } from "https://unpkg.com/xxh32@2.0.5/dist/raw.bundle.js";
 ```
 
 Dynamic import is also supported:
 
 ```js
 // Example using dynamic import for the string hashing function
-const { xxh32 } = await import("https://unpkg.com/xxh32@2.0.4/dist/index.bundle.js");
+const { xxh32 } = await import("https://unpkg.com/xxh32@2.0.5/dist/index.bundle.js");
 ```
 
 ## Usage
@@ -84,7 +84,7 @@ import { xxh32sr } from "xxh32/dist/stream-raw.js";
 or from a CDN:
 
 ```js
-import { xxh32sr } from "https://unpkg.com/xxh32@2.0.4/dist/stream-raw.bundle.js";
+import { xxh32sr } from "https://unpkg.com/xxh32@2.0.5/dist/stream-raw.bundle.js";
 ```
 
 ### Streaming Usage
